@@ -1,0 +1,262 @@
+
+<body>
+    <!-- navbar.component.html -->
+<nav>
+    <img [src]="Imagepath" height="130" width="250" alt="Your logo">
+    <h1 Myhighlight="rgba(245, 185, 66, 0.8)">Welcome {{username|capitalize}}</h1>
+    <ul class="nav-links">
+
+        <li><a href="#image">Home</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#popular">Destinations</a></li>
+        <li> <a routerLink="/deleteuser">DeActivate</a></li>
+        <li><a href="#about">About us</a></li>
+        <li  ><button (click)="remove()">Logout</button></li>
+        <li id="loginLogout" ><a routerLink="/login">Login</a></li>
+    </ul>
+</nav>
+   
+    <div class="main-content"></div>
+    <div id="image" class="background-image"></div>
+    <div class="overlay"><h1></h1></div>
+    <!--services start-->
+    <section class="services" id="services">
+        <div class="main-text">
+            <h3><span>We Offer</span> Best Services</h3>
+        </div>
+
+        <div class="card-content">
+            <div class="row">
+                <img [src]="Imagepath1" alt="">
+                <div class="card-body">
+                    <h3>Best Travels</h3>
+                </div>
+            </div>
+            <div class="row">
+                <img [src]="Imagepath2" alt="">
+                <div class="card-body">
+                    <h3>5/Star Hotels</h3>
+                </div>
+            </div>
+            <div class="row">
+                <img [src]="Imagepath3" alt="">
+                <div class="card-body">
+                    <h3>Fresh Food</h3>
+                </div>
+            </div>
+            <div class="row">
+                <img [src]="Imagepath4" alt="">
+                <div class="card-body">
+                    <h3>Tour Guide</h3>
+                </div>
+            </div>
+            <div class="row">
+                <img [src]="Imagepath5" alt="">
+                <div class="card-body">
+                    <h3>Adventure</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--services end-->
+     <!-- Popular Place Start -->
+     <section class="popular" id="popular">
+        <div class="main-text">
+            <h3>Popular <span>Destination</span></h3>
+        </div>
+        <div class="card-content">
+            <div class="row">
+                <img [src]="Imagepath6" alt="">
+            </div>
+            <div class="row">
+                <img [src]="Imagepath7" alt="">
+            </div>
+            <div class="row">
+                <img [src]="Imagepath8" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Popular Place End -->
+
+    <!-- Packages Section Start -->
+    <section class="packages" id="packages">
+        <div class="heading">
+            <h3>Packages</h3>
+        </div>
+        <div class="card-content">
+            <div class="row">
+                <div class="card-body">
+                    <div class="img">
+                        <img [src]="Imagepath9" alt="">
+                    </div>
+                    <h3>Kerala <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </h3>
+                    <p>
+                        Kerala, often referred to as "God's Own Country," is a stunning state located in the southern part of India. </p>
+                    <h2><a routerLink="/keralapackage"><button>Explore</button></a></h2>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+                    <div class="img">
+                        <img [src]="Imagepath10" alt="">
+                    </div>
+                    <h3>Tamil Nadu <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </h3>
+                    <p>Tamil Nadu, often known for its rich cultural heritage, ancient temples, scenic hill stations, and vibrant festivals.
+                    </p>
+                    <h2><a routerLink="/tamilnadupackage"><button>Explore</button></a></h2>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+                    <div class="img">
+                        <img [src]="Imagepath11" alt="">
+                    </div>
+                    <h3>Kashmir<i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </h3>
+                    <p>Kashmir is renowned for its stunning natural beauty, characterized by snow-capped mountains,green valleys,lakes,and meandering rivers.</p>
+                    <h2><a routerLink="/lehpackage"><button>Explore</button></a></h2>
+
+                </div>
+            </div><!--
+            <div class="row">
+                <div class="card-body">
+                    <div class="img">
+                        <img [src]="Imagepath12" alt="">
+                    </div>
+                    <h3>Goa <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, provident.</p>
+                    <h2>3D/2N<button>Explore</button></h2>
+
+                </div>
+            </div>-->
+        </div>
+
+
+   <!--     <div class="card-content" >
+            <div class="row">
+                <div class="card-body">
+                    <div class="img">
+                        <img [src]="Imagepath13" alt="">
+                    </div>
+                    <h3>Maharastra <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, provident.</p>
+                    <h2>5D/4N <button>Explore</button></h2>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+                    <div class="img">
+                        <img [src]="Imagepath14" alt="">
+                    </div>
+                    <h3>Jammu and Kashmir <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, provident.</p>
+                    <h2>4D/3N<button>Explore</button></h2>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+                    <div class="img">
+                        <img [src]="Imagepath15" alt="">
+                    </div>
+                    <h3>The Golden Triangle<i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, provident.</p>
+                    <h2>5D/4N <button>Explore</button></h2>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+                    <div class="img">
+                        <img [src]="Imagepath16" alt="">
+                    </div>
+                    <h3>Mysore Tourism<i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, provident.</p>
+                    <h2>3D/2N <button>Explore</button></h2>
+
+                </div>
+            </div>
+        </div>-->
+
+
+
+
+    </section>
+    <!-- Packages Section End -->
+    
+    <!-- Gallary Section Start -->
+    <form>
+        <section class="slider" id="slider">
+            <input type="radio" name="slider" id="s1" checked>
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="slider" id="s3">
+            <input type="radio" name="slider" id="s4">
+            <input type="radio" name="slider" id="s5">
+          
+            <ng-container *ngFor="let imagePath of imagePaths; let i = index">
+              <label [for]="'s' + (i + 1)" [id]="'slide' + (i + 1)">
+                <img [src]="imagePath" alt="">
+              </label>
+            </ng-container>
+          </section>
+    </form>
+    
+      
+    <!-- Gallary Section End -->
+
+    <h2 align="center" id="about" class="about">About us</h2>
+    <hr> 
+
+    <div class="abt">
+        <p>Welcome to our company! We're passionate about providing high-quality products and excellent customer service to our valued clients. With years of experience in the industry, we pride ourselves on our commitment to innovation, integrity, and reliability.
+        At our company, we believe in going above and beyond to meet our customers' needs. Whether you're looking for cutting-edge solutions or personalized assistance, our team is here to help you every step of the way. We strive to exceed your expectations and deliver results that make a difference.
+        With a focus on continuous improvement and customer satisfaction, we're dedicated to earning your trust and building long-lasting relationships. Join us on this journey as we work together to achieve success and make a positive impact in the world.
+        Thank you for choosing our company. We look forward to serving you!</p>
+    </div>
+
+    <!-- Horizontal panel of images -->
+   
+</body>

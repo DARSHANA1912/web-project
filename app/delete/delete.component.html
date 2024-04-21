@@ -1,0 +1,16 @@
+<nav class="top-nav">
+    <img [src]="Imagepath" height="130" width="350" alt="Your logo">
+    <ul class="nav-links">
+
+        <li><a routerLink="/admin">Home</a></li>
+        <li><button (click)="remove()">Logout</button></li>
+    </ul>
+</nav>
+<div class="container">
+    <h2>Delete User</h2>
+    <form #userForm="ngForm" (ngSubmit)="deleteUser(userForm)" class="form-item">
+      <label for="userId">Email</label>
+      <input type="text" placeholder="Email"  name="email" id="email" ngModel #email="ngModel"/>
+      <button type="submit" (click)="deleteUser(userForm)">Deactivate User</button>
+    </form>
+</div>

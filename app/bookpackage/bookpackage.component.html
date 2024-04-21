@@ -1,0 +1,63 @@
+<!-- book-package.component.html --><!--
+<div *ngIf="bookingDetails">
+    <h2>Booking Details</h2>
+    <p><strong>Package Type:</strong> {{ bookingDetails.packageType }}</p>
+    <p><strong>Number of Persons:</strong> {{ bookingDetails.numberOfPersons }}</p>
+    <p><strong>Selected Slot:</strong> {{ bookingDetails.selectedSlot }}</p>
+    <p><strong>Total Price:</strong> {{ bookingDetails.totalPrice }}</p>
+  </div>
+  <div *ngIf="!bookingDetails">
+    <p>No booking details found.</p>
+  </div>
+-->
+<!-- book-package.component.html -->
+<nav class="top-nav">
+  <img [src]="Imagepath" height="130" width="350" alt="Your logo">
+  <h1>Welcome {{username}}</h1>
+  <ul class="nav-links">
+
+      <li><a href="#image">Home</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><button (click)="remove()">Logout</button></li>
+  </ul>
+</nav>
+
+<div class="booking-form">
+  <form  >
+    <h2>Booking Details</h2>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" [value]="user" disabled>
+    </div>
+    <div class="form-group">
+      <label for="packageName">Package Name:</label>
+      <input type="text" id="packageName" name="packageName" [(ngModel)]="bookingDetails.packageName" required disabled>
+    </div>
+    <div class="form-group">
+      <label for="packageType">Package Type:</label>
+      <input type="text" id="packageType" name="packageType" [(ngModel)]="bookingDetails.packageType" required disabled>
+    </div>
+    <div class="form-group">
+      <label for="numberOfPersons">Number of Persons:</label>
+      <input type="number" id="numberOfPersons" name="numberOfPersons" [(ngModel)]="bookingDetails.numberOfPersons" required disabled>
+    </div>
+    <div class="form-group">
+      <label for="selectedSlot">Selected Slot:</label>
+      <input type="text" id="selectedSlot" name="selectedSlot" [(ngModel)]="bookingDetails.selectedSlot" required disabled>
+    </div>
+    <div class="form-group">
+      <label for="totalPrice">Total Price:</label>
+      <input type="number" id="totalPrice" name="totalPrice" [(ngModel)]="bookingDetails.totalPrice" required disabled>
+    </div>
+    <!--<div class="form-group">
+      <input type="text" id="gpayNumber" name="gpayNumber" [(ngModel)]="gpayNumber" required appPhoneValidate>
+      <div *ngIf="bookingForm.get('gpayNumber')?.invalid && bookingForm.get('gpayNumber')?.touched">
+      <span *ngIf="bookingForm.get('gpayNumber')?.errors?.['required']">* Required</span>
+      </div>
+    </div>-->
+    <div class="form-actions">
+      <button type="button" class="btn-confirm" (click)="confirmBooking()">Confirm</button>
+      <button type="button" class="btn-cancel" (click)="cancelBooking()">Cancel</button>
+    </div>
+  </form>
+</div>

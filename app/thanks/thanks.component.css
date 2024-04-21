@@ -1,0 +1,33 @@
+body {
+    font-size: 24px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(243, 170, 87, 0.8), rgba(0,0,50,0.8)), url("/assets/images/thanks1.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.form-box {
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.emoji {
+    font-size: 48px; /* Adjust font size as needed */
+    margin-bottom: 20px;
+    margin-left: 20;
+}

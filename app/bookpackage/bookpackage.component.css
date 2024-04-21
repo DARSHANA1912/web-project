@@ -1,0 +1,102 @@
+.booking-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 200px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 170px; /* Adjust nav bar height as needed */
+  background-color: #f0f0f0; /* Set desired background color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999; /* Ensure nav bar stays on top */
+}
+#loginLogout a {
+  text-decoration: none;
+  color: #333; /* Set desired text color */
+  font-weight: bold;
+  padding: 10px 15px; /* Adjust padding as needed */
+  border-radius: 5px; /* Optional: Add border radius */
+  border: 1px solid #333; /* Optional: Add border */
+  transition: background-color 0.3s ease; /* Optional: Add transition effect */
+}
+
+#loginLogout a:hover {
+  background-color: rgba(245, 185, 66, 0.8); /* Change hover background color */
+  color: #fff; /* Change text color on hover */
+}
+
+.top-nav img { 
+  margin-left: 20px; /* Adjust horizontal margin as needed */
+    margin-right: 20px; /* Add margin to the right to prevent overlapping */
+    height: 130px;
+    width: 350px;
+}
+
+.top-nav .nav-links {
+  margin-right: 20px; /* Adjust horizontal margin as needed */
+  list-style: none;
+  display: flex;
+}
+
+.top-nav .nav-links li {
+  margin-right: 15px; /* Adjust spacing between navigation links */
+}
+
+.top-nav .nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 15px; /* Adjust padding as needed */
+}
+
+.top-nav .nav-links a:hover {
+  background-color:  rgba(245, 185, 66, 0.8);    /* Change hover background color */
+}
+
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-confirm {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-cancel {
+  background-color: #f44336;
+  color: white;
+}

@@ -1,0 +1,190 @@
+<body>
+  
+  <nav class="top-nav">
+    <img [src]="Imagepath" height="130" width="350" alt="Your logo">
+    <h1>Welcome {{username}}</h1>
+    <ul class="nav-links">
+  
+        <li><a href="#image">Home</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><button (click)="remove()">Logout</button></li>
+    </ul>
+  </nav>
+  
+      <section class="journals" id="journals">
+        <div class="section__container journals__container">
+          <h2 class="section__header">Tamil Nadu Tourist Places</h2>
+          <p class="section__subheader">
+              Tamil Nadu, located in the southern part of India, is a state renowned for its rich cultural heritage, ancient temples, classical music and dance, picturesque hill stations, and vibrant festivals.
+          </p>
+          <div class="journals__grid">
+            <div class="journals__card">
+              <img src="../../assets/images/tn2.jpg" height="250" width="200" alt="journal" />
+              <div class="journals__content">
+                <div class="journals__author">
+                  <p><strong>Trichy</strong></p>
+                </div>
+                <h4>Tiruchirappalli, commonly known as Trichy, is a city in Tamil Nadu, India, steeped in history and cultural heritage.</h4>
+                <h4>Available Slot:</h4>
+                <select [(ngModel)]="selectedSlot" (change)="selectSlot(selectedSlot)">
+                  <option *ngFor="let slot of availableSlots" [value]="slot">{{ slot }}</option>
+                </select>
+                <div class="person-selector">
+                  <h4>Number of Persons:</h4>
+                  <select [(ngModel)]="selectedNumberOfPersons" (change)="selectNumberOfPersons($event)">
+                    <option *ngFor="let numberOfPersons of [1, 2, 3, 4, 5]" [value]="numberOfPersons">{{ numberOfPersons }} Person(s)</option>
+                  </select>
+                  
+                </div>
+                <h4>Package Type:</h4>
+                <label>
+                <input type="radio" name="packageType" value="standard" [(ngModel)]="selectedPackageType" (change)="selectPackageType('standard')">
+                  Standard
+                </label>
+                <label>
+                  <input type="radio" name="packageType" value="gold" [(ngModel)]="selectedPackageType" (change)="selectPackageType('gold')">
+                  Gold
+                </label>
+                <label>
+                  <input type="radio" name="packageType" value="platinum" [(ngModel)]="selectedPackageType" (change)="selectPackageType('platinum')">
+                  Platinum
+                </label>
+                <h4>Grant Price:</h4>
+                <p>{{ calculatePrice() }}</p>
+                
+                <div class="journals__footer">
+                  
+                  <a routerLink="/bookpackage" class="btn" (click)="bookNow">Book Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="journals__card">
+              <img src="../../assets/images/tn3.jpg" height="250" width="200" alt="journal" />
+              <div class="journals__content">
+                <div class="journals__author">
+                  <p><strong>Ooty</strong></p>
+                </div>
+                <h4>Renowned for its stunning natural beauty, pleasant climate, and Ooty has earned the title of "Queen of Hill Stations."</h4>
+                <h4>Available Slot:</h4>
+                <select [(ngModel)]="selectedSlot1" (change)="selectSlot1(selectedSlot1)">
+                  <option *ngFor="let slot of availableSlots1" [value]="slot">{{ slot }}</option>
+                </select>
+                <div class="person-selector">
+                  <h4>Number of Persons:</h4>
+                  <select [(ngModel)]="selectedNumberOfPersons1" (change)="selectNumberOfPersons1($event)">
+                    <option *ngFor="let numberOfPersons1 of [1, 2, 3, 4, 5]" [value]="numberOfPersons1">{{ numberOfPersons1 }} Person(s)</option>
+                  </select>
+                  
+                </div>
+                <h4>Package Type:</h4>
+                <label>
+                <input type="radio" name="packageType1" value="standard" [(ngModel)]="selectedPackageType1" (change)="selectPackageType1('standard')">
+                  Standard
+                </label>
+                <label>
+                  <input type="radio" name="packageType1" value="gold" [(ngModel)]="selectedPackageType1" (change)="selectPackageType1('gold')">
+                  Gold
+                </label>
+                <label>
+                  <input type="radio" name="packageType1" value="platinum" [(ngModel)]="selectedPackageType1" (change)="selectPackageType1('platinum')">
+                  Platinum
+                </label>
+                <h4>Grant Price:</h4>
+                <p>{{ calculatePrice1() }}</p>
+                <div class="journals__footer">
+                  <a routerLink="/bookpackage" (click)="bookNow1()" class="btn">Book Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="journals__card">
+              <img src="../../assets/images/tn5.jpg" height="250" width="200" alt="journal" />
+              <div class="journals__content">
+                <div class="journals__author">
+                  <p><strong>Kanyakumari</strong></p>
+                </div>
+                <h4>Kanyakumari, situated at the southernmost tip of mainland India, is a captivating coastal town.</h4>
+                <h4>Available Slot:</h4>
+                <select [(ngModel)]="selectedSlot2" (change)="selectSlot2(selectedSlot2)">
+                  <option *ngFor="let slot of availableSlots" [value]="slot">{{ slot }}</option>
+                </select>
+                <div class="person-selector">
+                  <h4>Number of Persons:</h4>
+                  <select [(ngModel)]="selectedNumberOfPersons2" (change)="selectNumberOfPersons2($event)">
+                    <option *ngFor="let numberOfPersons2 of [1, 2, 3, 4, 5]" [value]="numberOfPersons2">{{ numberOfPersons2 }} Person(s)</option>
+                  </select>
+                  
+                </div>
+                <h4>Package Type:</h4>
+                <label>
+                <input type="radio" name="packageType2" value="standard" [(ngModel)]="selectedPackageType2" (change)="selectPackageType2('standard')">
+                  Standard
+                </label>
+                <label>
+                  <input type="radio" name="packageType2" value="gold" [(ngModel)]="selectedPackageType2" (change)="selectPackageType2('gold')">
+                  Gold
+                </label>
+                <label>
+                  <input type="radio" name="packageType2" value="platinum" [(ngModel)]="selectedPackageType2" (change)="selectPackageType2('platinum')">
+                  Platinum
+                </label>
+                <h4>Grant Price:</h4>
+                <p>{{ calculatePrice2() }}</p>
+                <div class="journals__footer">
+                  <a routerLink="/bookpackage" (click)="bookNow2()"class="btn">Book Now</a>
+                </div>
+              </div>
+            </div>
+            <!--
+            <div class="journals__card">
+              <img src="../../assets/images/WAYANAD.jpg" height="250" width="200" alt="journal" />
+              <div class="journals__content">
+                <div class="journals__author">
+                  <p><strong>Wayanad</strong></p>
+                </div>
+                
+                <h4>Wayanad is a picturesque hill station nestled in the Western Ghats, offering pristine forests, majestic waterfalls, and unique wildlife experiences.</h4>
+                <div class="journals__footer">
+                  <a href="view_packages.html" class="btn">View Packages</a>
+                </div>
+              </div>
+            </div>
+            <div class="journals__card">
+              <img src="../../assets/images/munnar.jpg" height="250" width="200" alt="journal" />
+              <div class="journals__content">
+                <div class="journals__author">
+                  <p><strong>Munnar</strong></p>
+                </div>
+                <h4>Munnar is renowned for its lush tea plantations and misty hills, offering breathtaking views and a tranquil atmosphere.Also famous for its Neelakurinji flowers</h4>
+                <div class="journals__footer">
+                  <a href="view_packages.html" class="btn">View Packages</a>
+                </div>
+              </div>
+            </div>
+            <div class="journals__card">
+              <img src="../../assets/images/kochin.jpeg" height="250" width="200" alt="journal" />
+              <div class="journals__content">
+                <div class="journals__author">
+                  <p><strong>Kochin</strong></p>
+                </div>
+                <h4>Kochi,is a vibrant city with a rich history and cultural heritage, featuring ancient landmarks, bustling markets, and scenic backwaters.</h4>
+                <div class="journals__footer">
+                  <a href="view_packages.html" class="btn">View Packages</a>
+                </div>
+              </div>
+            </div>
+            <div class="journals__card">
+              <img src="../../assets/images/KUMARAKOM.jpg" height="250" width="200" alt="journal" />
+              <div class="journals__content">
+                <div class="journals__author">
+                  <p><strong>Kumarakom</strong></p>
+                </div>
+                <h4>Kumarakom is a serene village situated on the banks of Vembanad Lake, famous for its backwater cruises, lush greenery, and diverse birdlife. </h4>
+                <div class="journals__footer">
+                  <a href="view_packages.html" class="btn">View Packages</a>
+                </div>
+              </div>
+            </div>-->
+        </div>
+      </div>
+      </section>
+  </body>

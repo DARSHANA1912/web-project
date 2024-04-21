@@ -1,0 +1,32 @@
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 class="form-title">Update Password</h1>
+            <form #Form="ngForm" (ngSubmit)="onSubmit(Form)">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input required type="email" placeholder="Email" name="email" [(ngModel)]="email" #email="ngModel" />
+                        <div *ngIf="email.invalid ">
+                            <span *ngIf="email.touched && email.errors?.['required']">*</span>
+                            <span *ngIf="email.errors?.['pattern']">* Invalid email</span>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" name="password" [(ngModel)]="password" #password="ngModel" minlength="5" required />
+                        <div *ngIf="password.invalid">
+                            <span *ngIf="password.touched && password.errors?.['required']">* </span>
+                            <span *ngIf="password.errors?.['minlength']">* 5 characters required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-field">
+                    <button type="button"  (click)="resetForm(Form)">Reset</button>
+                    <button type="button" (click)="onSubmit(Form)" id="signinBtn" >Confirm</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</body>

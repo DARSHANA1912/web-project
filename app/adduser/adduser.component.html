@@ -1,0 +1,21 @@
+<nav class="top-nav">
+    <img [src]="Imagepath" height="130" width="350" alt="Your logo">
+    <ul class="nav-links">
+
+        <li><a routerLink="/admin">Home</a></li>
+        <li><button (click)="remove()">Logout</button></li>
+    </ul>
+</nav>
+<div class="container">
+    <h2>Add User</h2>
+    <form #userForm="ngForm" (ngSubmit)="addUser(userForm)" class="form-item">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      <button type="submit">Add User</button>
+    </form>
+  </div>
+  

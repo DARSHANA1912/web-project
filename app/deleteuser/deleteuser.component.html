@@ -1,0 +1,28 @@
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<div class="container">
+    <div class="form-box">
+        <h1 id="title">De-Activate</h1>
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)" (click)="validateForm()">
+            <div class="input-group">
+                <div class="input-field">
+                    <i class='bx bx-envelope' ></i>
+                    <input type="text" placeholder="Email"  name="email" id="email" ngModel #email="ngModel"/>
+                    <div class="error" id="emailErr"></div>
+                </div>
+            
+                <div class="input-field">
+                    <i class='bx bx-lock-alt' ></i>
+                    <input type="password" placeholder="Password"  name="password" id="password" ngModel #password="ngModel"/>
+                    <div class="error" id="pwErr"></div>
+                </div>
+            </div>
+            <div class="btn-field">
+                <button type="button" id="signupForm" value="Submit" (click)="onSubmit(form)"  >Submit</button>
+                <button type="button"  id="signinBtn" value="Reset" (click)="resetForm(form)" >Reset</button>
+            </div>
+        </form>
+        
+        
+        
+    </div>
+</div>
